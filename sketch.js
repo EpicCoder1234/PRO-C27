@@ -14,7 +14,7 @@ function preload()
 }
 
 function setup() {
-	createCanvas(800, 700);
+	createCanvas(1200, 700);
 
 
 	engine = Engine.create();
@@ -22,11 +22,11 @@ function setup() {
 
 	roof = new Roof(400,100,600,50);
 
-	bob1 = new Bob(400,500,100);
-	bob2 = new Bob(500,500,100);
-	bob3 = new Bob(600,500,100);
-	bob4 = new Bob(300,500,100);
-	bob5 = new Bob(200,500,100);
+	bob1 = new Bob(400,500,50);
+	bob2 = new Bob(500,500,50);
+	bob3 = new Bob(600,500,50);
+	bob4 = new Bob(300,500,50);
+	bob5 = new Bob(200,500,50);
 	rope1 = new Rope(bob1.body,roof.body,0,0);
 	rope2 = new Rope(bob2.body,roof.body,100,0);
 	rope3 = new Rope(bob3.body,roof.body,200,0);
@@ -59,11 +59,10 @@ function draw(){
   bob4.display();
   bob5.display();
 
-  keyPressed();
 }
 function keyPressed(){
 	if(keyCode === UP_ARROW){
-		Matter.Body.applyForce(bob3.body, bob3.body.position,{x:310,y:-600})
+		Matter.Body.applyForce(bob3.body, bob3.body.position,{x:100,y:-100})
 	}
 }
 
